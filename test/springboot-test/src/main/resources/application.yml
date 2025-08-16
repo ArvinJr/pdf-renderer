@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: renderer-test
+
+grpc:
+  client:
+    GLOBAL:
+      address: "static://127.0.0.1:5001"
+      negotiation-type: plaintext

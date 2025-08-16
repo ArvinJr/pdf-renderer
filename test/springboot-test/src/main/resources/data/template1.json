@@ -1,0 +1,117 @@
+{
+  "header": {
+    "details": {
+      "name": "Speakersbay",
+      "invoice": {
+        "no": "IN001",
+        "date": "2023-06-16"
+      },
+      "client": {
+        "name": "JOHN DOE",
+        "phone": 8125551236,
+        "email": "JOHNDOE@EXAMPLE.COM",
+        "address": "452 PEACH DRIVE, GEORGIA, US, M3A9G2"
+      }
+    },
+    "logo": "/company_logo.png"
+  },
+  "body": [
+    {
+      "description": "Service 1",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 2",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 3",
+      "price": 456.78,
+      "quantity": 3
+    },
+    {
+      "description": "Service 4",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 5",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 6",
+      "price": 456.78,
+      "quantity": 3
+    },
+    {
+      "description": "Service 7",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 8",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 9",
+      "price": 456.78,
+      "quantity": 3
+    },{
+      "description": "Service 10",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 11",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 12",
+      "price": 456.78,
+      "quantity": 3
+    },
+    {
+      "description": "Service 13",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 14",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 15",
+      "price": 456.78,
+      "quantity": 3
+    },
+    {
+      "description": "Service 16",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "description": "Service 17",
+      "price": 890,
+      "quantity": 2
+    },
+    {
+      "description": "Service 18",
+      "price": 456.78,
+      "quantity": 3
+    }
+  ],
+  "note": "Payment Details:\nBank Name - TBD bank\nAccount No - 12345678",
+  "footer": {
+    "name": "Speakersbay",
+    "address": "130 Cherry street,Toronto, Canada, L9T9A8",
+    "website": "www.speakersbay.com",
+    "email": "info@speakersbay.com",
+    "phone": 1234567890
+  }
+}
