@@ -1,0 +1,32 @@
+{
+  "name": "@demo/grpc-proto",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto -I=src/proto --ts_proto_opt=nestJs=true --ts_proto_opt=exportCommonSymbols=false --ts_proto_out=./src/types ./src/proto/**/*.proto",
+    "build": "tsup"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.13.3",
+    "@nestjs/microservices": "^11.1.1",
+    "@protobuf-ts/protoc": "^2.10.0",
+    "grpc-tools": "^1.13.0",
+    "rxjs": "^7.8.1",
+    "ts-proto": "^2.7.0",
+    "tsup": "^8.5.0"
+  },
+  "peerDependencies": {
+    "@grpc/grpc-js": "^1.13.3",
+    "@nestjs/microservices": "^11.1.1",
+    "rxjs": "^7.8.1"
+  }
+}

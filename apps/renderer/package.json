@@ -1,5 +1,5 @@
 {
-  "name": "@demo/frontend",
+  "name": "renderer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "@demo/ui": "workspace:*"
+    "@demo/ui": "workspace:*",
+    "axios": "^1.9.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   }
 }

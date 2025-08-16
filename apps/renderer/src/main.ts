@@ -1,12 +1,10 @@
 import { CreateUI } from '@demo/ui'
-import ElementPlus from 'element-plus'
 import { createApp } from 'vue'
 import App from './App.vue'
-import './style.css'
+import { router } from './router'
 import '@demo/ui/style.css'
-import 'element-plus/dist/index.css'
 
 createApp(App)
-  .use(ElementPlus)
+  .use(router)
   .use(CreateUI())
   .mount('#app')

@@ -10,13 +10,17 @@
   "files": [
     "dist"
   ],
-  "main": "dist/demo-ui.umd.js",
+  "main": "dist/demo-ui.cjs",
   "module": "dist/demo-ui.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/demo-ui.es.js",
+      "require": "./dist/demo-ui.cjs"
+    },
+    "./umd": {
+      "import": "./dist/demo-ui.umd.js",
       "require": "./dist/demo-ui.umd.js"
     },
     "./style.css": "./dist/ui.css"
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.4",
     "@types/lodash-es": "^4.17.12",
+    "@vueuse/core": "^13.2.0",
     "lodash-es": "^4.17.21",
     "vite-plugin-dts": "^4.5.3",
     "vue": "^3.5.13"

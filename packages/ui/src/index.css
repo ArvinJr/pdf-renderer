@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@utility size-a4 {
+    width: 210mm;
+    height: 297mm;
+}
+
+@utility print-page {
+    break-after: page;
+    break-inside: avoid;
+}

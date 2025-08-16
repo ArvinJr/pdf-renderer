@@ -1,1 +1,1 @@
-export { default as XxButton } from './XxButton/index.vue'
+export { default as XxTemplate1 } from './template1/index.vue'

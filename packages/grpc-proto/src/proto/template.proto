@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package template;
+
+//import "google/protobuf/empty.proto";
+
+service StaticTemplateService {
+//    rpc Template1(Template1Data) returns (google.protobuf.Empty) {}
+  rpc Template2(Template1Data) returns (stream PdfStream) {}
+}
+
+message Invoice {
+  string no = 1;
+  string date = 2;
+}
+
+message Client {
+  string name = 1;
+  int64 phone = 2;
+  string email = 3;
+  string address = 4;
+}
+
+message Details {
+  string name = 1;
+  Invoice invoice = 2;
+  Client client = 3;
+}
+
+message Header {
+  optional string logo = 1;
+  optional Details details = 2;
+}
+
+message Body {
+  string description = 1;
+  double price = 2;
+  double quantity = 3;
+}
+
+message Footer {
+  string name = 1;
+  string address = 2;
+  string website = 3;
+  string email = 4;
+  int64 phone = 5;
+}
+
+message Template1Data {
+  optional Header header = 1;
+  repeated Body body = 2;
+  optional string note = 3;
+  optional Footer footer = 4;
+}
+
+message PdfStream {
+  oneof data {
+    bytes chunk = 1;
+    int32 count = 2;
+  }
+}

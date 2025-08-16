@@ -20,6 +20,7 @@
       "@demo/ui": ["../ui/src"],
       "@demo/ui/styles.css": ["../ui/dist/ui.css"],
       "@demo/ui/*": ["../ui/src/*"]
-    }
+    },
+    "types": ["element-plus/global"]
   }
 }

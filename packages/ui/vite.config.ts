@@ -11,25 +11,36 @@ export default defineConfig({
     tailwindcss(),
     dts({ tsconfigPath: './tsconfig.app.json' }),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
   build: {
     emptyOutDir: false,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'demo-ui',
-      formats: ['es', 'umd'],
-      fileName: format => `demo-ui.${format}.js`,
+      formats: ['es', 'umd', 'cjs'],
+      fileName: (format) => {
+        if (format === 'cjs') {
+          return 'demo-ui.cjs'
+        }
+        if (format === 'es') {
+          return 'demo-ui.es.js'
+        }
+        return 'demo-ui.umd.js'
+      },
     },
     rollupOptions: {
-      external: ['vue', 'lodashEs'],
+      external: ['vue'],
       output: {
         globals: {
           vue: 'Vue',
         },
+      },
+      onwarn(warning, warn) {
+        if (warning.code === 'UNUSED_EXTERNAL_IMPORT'
+          && warning.exporter === 'vue'
+          && warning.names?.includes('guardReactiveProps')) {
+          return
+        }
+        warn(warning)
       },
     },
   },
